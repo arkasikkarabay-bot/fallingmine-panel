@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1097255805940850"
+     crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FallingMine — магазин</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090d0b;--panel:#101612;--panel2:#151c17;--line:#263229;--green:#58d16b;--green2:#2da64b;--text:#f2f5f2;--muted:#94a19a;--gold:#ffd45c;--red:#ff6b6b}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 50% -10%,#1b3a22 0,#0b110d 38%,#070a08 75%);color:var(--text);font-family:Inter,system-ui,sans-serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:linear-gradient(90deg,#fff 1px,transparent 1px),linear-gradient(#fff 1px,transparent 1px);background-size:32px 32px}
+header{position:sticky;top:0;z-index:5;background:rgba(8,12,9,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-family:"Press Start 2P";font-size:16px;color:#fff;text-shadow:3px 3px #17652a}.brand span{color:var(--green)}
+.navlinks{display:flex;gap:8px}.navlinks a{color:#b9c5bd;text-decoration:none;padding:9px 13px;border-radius:9px}.navlinks a:hover{background:#18211b;color:#fff}
+.container{max-width:1120px;margin:auto;padding:55px 22px 80px}.hero{display:grid;grid-template-columns:1.4fr .6fr;gap:24px;align-items:stretch}
+.hero-card,.balance{border:1px solid var(--line);background:linear-gradient(145deg,rgba(24,38,27,.96),rgba(12,18,14,.96));border-radius:18px;padding:34px;box-shadow:0 18px 50px #0006}
+.eyebrow{color:var(--green);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:12px}.hero h1{font-family:"Press Start 2P";font-size:34px;line-height:1.35;margin:16px 0}.hero p{color:var(--muted);font-size:16px;line-height:1.7;max-width:650px}
+.server-ip{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:13px 15px;border:1px dashed #45614b;background:#0a100c;border-radius:10px;font-family:monospace;color:#dff5e3}.dot{width:9px;height:9px;background:#57df69;border-radius:50%;box-shadow:0 0 14px #57df69}
+.balance{display:flex;flex-direction:column;justify-content:space-between}.balance small{color:var(--muted)}.amount{font-size:38px;font-weight:800;margin:10px 0}.fling{color:var(--gold)}.click{width:100%;border:0;border-radius:11px;padding:13px;background:linear-gradient(#5fe173,#32b950);color:#071008;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #1b762e}.click:active{transform:translateY(3px);box-shadow:0 2px 0 #1b762e}
+.notice{margin:24px 0;padding:14px 17px;border:1px solid #33443a;background:#0d130f;border-radius:12px;color:#aebbb2}.section-title{display:flex;justify-content:space-between;align-items:end;margin:45px 0 18px}.section-title h2{margin:0;font-size:23px}.section-title span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{position:relative;background:linear-gradient(160deg,#141d17,#0e130f);border:1px solid var(--line);border-radius:15px;padding:22px;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#3e6a49}.badge{display:inline-block;padding:5px 8px;border-radius:7px;background:#26362a;color:#79e789;font-size:11px;font-weight:800;text-transform:uppercase}.icon{font-size:42px;margin:18px 0 12px}.card h3{margin:0 0 8px}.card p{color:var(--muted);min-height:44px;line-height:1.5;font-size:13px}.price{font-size:22px;font-weight:800;margin:17px 0}.buy{width:100%;padding:11px;border:1px solid #396545;background:#17271b;color:#baf3c3;border-radius:9px;font-weight:700;cursor:pointer}.buy:hover{background:#1d3423}.footer{border-top:1px solid var(--line);padding:25px 0;color:#718077;font-size:12px;text-align:center;margin-top:55px}
+.toast{position:fixed;right:20px;bottom:20px;background:#162219;border:1px solid #42664b;padding:14px 17px;border-radius:11px;box-shadow:0 12px 35px #0008;transform:translateY(20px);opacity:0;pointer-events:none;transition:.25s}.toast.show{transform:none;opacity:1}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.hero h1{font-size:24px}.navlinks{display:none}.container{padding-top:30px}}
+</style>
+</head>
+<body>
+<header><nav class="nav"><div class="brand">FALLING<span>MINE</span></div><div class="navlinks"><a href="#shop">Донаты</a><a href="#flings">Флинги</a><a href="#about">О сервере</a></div></nav></header>
+<main class="container">
+<section class="hero">
+<div class="hero-card"><div class="eyebrow">Minecraft • Survival</div><h1>Добро пожаловать<br>на FallingMine</h1><p>Магазин сервера, где флинги можно получать за активность и позже использовать для покупки донатов.</p><div class="server-ip"><i class="dot"></i> fallingmine.ddns.net</div></div>
+<aside class="balance" id="flings"><div><small>Твой баланс</small><div class="amount"><span id="balance">9123</span> <span class="fling">флингов</span></div><small>Демо-режим • данные сохраняются только в браузере</small></div><button class="click" id="earn">⛏ Получить +10 флингов</button></aside>
+</section>
+<div class="notice">💡 Сейчас это тестовая версия: покупки не списывают реальные деньги. Баланс хранится локально в браузере.</div>
+<section id="shop"><div class="section-title"><h2>Магазин донатов</h2><span>Оплата флингами</span></div>
+<div class="grid">
+<article class="card"><span class="badge">Старт</span><div class="icon">🪨</div><h3>Деревня</h3><p>Базовый набор привилегий для игрока.</p><div class="price">73 флинга</div><button class="buy" data-price="73" data-name="Деревня">Купить</button></article>
+<article class="card"><span class="badge">Популярный</span><div class="icon">⚔️</div><h3>Герцог</h3><p>Расширенные возможности и статус на сервере.</p><div class="price">9 123 флинга</div><button class="buy" data-price="9123" data-name="Герцог">Купить</button></article>
+<article class="card"><span class="badge">Скоро</span><div class="icon">👑</div><h3>Император</h3><p>Ещё более высокий статус. Настроишь стоимость позже.</p><div class="price">—</div><button class="buy" data-price="999999999" data-name="Император" disabled>Скоро</button></article>
+</div></section>
+<section id="about"><div class="section-title"><h2>FallingMine</h2></div><div class="hero-card"><p style="margin:0">IP сервера: <b>fallingmine.ddns.net</b><br>Флинги — внутриигровая валюта проекта. В этой версии сайта реализован только интерфейс магазина.</p></div></section>
+<footer class="footer">FallingMine © 2026 • Неофициальный фан-сайт Minecraft-сервера.</footer>
+</main><div class="toast" id="toast"></div>
+
+<script>
+// Данные твоего сервера из server.properties
+const SERVER_IP = "fallingmine.ddns.net";
+const RCON_PORT = 25575;
+const RCON_PASSWORD = "peperopertororoper";
+
+const key="fallingmine_balance"; let balance=Number(localStorage.getItem(key) ?? 9123);
+const el=document.getElementById("balance"),toast=document.getElementById("toast"); el.textContent=balance.toLocaleString("ru-RU");
+
+function save(){localStorage.setItem(key,balance);el.textContent=balance.toLocaleString("ru-RU")}
+function msg(t){toast.textContent=t;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2200)}
+
+document.getElementById("earn").onclick=()=>{balance+=10;save();msg("⛏ +10 флингов!")}
+
+document.querySelectorAll(".buy").forEach(b=>b.onclick=async()=>{
+    let p=+b.dataset.price,n=b.dataset.name;
+    
+    // 1. Проверяем баланс флингов на сайте
+    if(balance<p){msg("❌ Не хватает флингов");return}
+    
+    // 2. Спрашиваем ник игрока
+    let playerNickname = prompt("Введи свой Minecraft-ник для выдачи доната:");
+    if(!playerNickname || playerNickname.trim() === "") {
+        msg("❌ Ник не введен, покупка отменена");
+        return;
+    }
+    playerNickname = playerNickname.trim();
+
+    // 3. Выбираем команду под конкретный донат
+    let command = "";
+    if (n === "Деревня") {
+        command = `lp user ${playerNickname} parent add village`; // Для плагина LuckPerms
+    } else if (n === "Герцог") {
+        command = `lp user ${playerNickname} parent add duke`;
+    } else {
+        command = `say Игрок ${playerNickname} купил неизвестный товар`;
+    }
+
+    // Блокируем кнопку на время отправки
+    b.innerText = "Связь с сервером...";
+    b.disabled = true;
+
+    try {
+        // 4. Отправляем запрос напрямую в RCON через бесплатный шлюз-посредник
+        const response = await fetch(`https://rcon.net`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                host: SERVER_IP,
+                port: RCON_PORT,
+                password: RCON_PASSWORD,
+                command: command
+            })
+        });
+
+        if (response.ok) {
+            // Если команда успешно улетела в консоль сервера, только тогда списываем флинги
+            balance-=p;
+            save();
+            msg("✅ «"+n+"» выдан игроку " + playerNickname);
+        } else {
+            msg("❌ Ошибка сервера: неверный пароль RCON или порт закрыт");
+        }
+    } catch (error) {
+        msg("❌ Ошибка связи. Сервер Майнкрафт выключен?");
+        console.error(error);
+    } finally {
+        b.innerText = "Купить";
+        b.disabled = false;
+    }
+});
+</script>
+</body></html>
+
